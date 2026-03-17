@@ -1,0 +1,23 @@
+<Window
+    x:Class="AvaloniaExercise.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:icons="https://github.com/projektanker/icons.avalonia"
+    xmlns:local="using:AvaloniaExercise"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:AvaloniaExercise.ViewModels"
+    Title="Animals Crossing"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    x:DataType="vm:MainWindowViewModel"
+    Icon="/Assets/icon.ico"
+    RequestedThemeVariant="Dark"
+    mc:Ignorable="d">
+
+    <TextBlock
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Text="Your UI here!" />
+
+</Window>
