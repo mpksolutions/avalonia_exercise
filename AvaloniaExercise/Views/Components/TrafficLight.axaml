@@ -1,0 +1,52 @@
+<UserControl
+    x:Class="AvaloniaExercise.Views.TrafficLight"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AvaloniaExercise"
+    xmlns:vm="using:AvaloniaExercise.ViewModels"
+    x:DataType="vm:MainWindowViewModel">
+    <UserControl.Styles>
+        <Style Selector="Border.bulb">
+            <Setter Property="Width" Value="52" />
+            <Setter Property="Height" Value="52" />
+            <Setter Property="BorderThickness" Value="6" />
+            <Setter Property="CornerRadius" Value="26" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Transitions">
+                <Transitions>
+                    <DoubleTransition Property="Opacity" Duration="0:0:0.25" Easing="SineEaseInOut" />
+                </Transitions>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+    <Border
+        HorizontalAlignment="Center"
+        Background="{StaticResource TrafficLightBackgroundBrush}"
+        BorderBrush="{StaticResource TrafficLightBorderBrush}"
+        BorderThickness="1"
+        CornerRadius="18"
+        Padding="14,28"
+        Width="108">
+        <StackPanel Spacing="12">
+
+            <Border
+                Classes="bulb"
+                Background="{StaticResource RedAccentBrush}"
+                BorderBrush="{StaticResource RedAccentGlowBrush}"
+                Opacity="{Binding TrafficLightStatus, Converter={x:Static local:ValueConverters.StatusActiveOpacity}, ConverterParameter=Red}" />
+
+            <Border
+                Classes="bulb"
+                Background="{StaticResource AmberAccentBrush}"
+                BorderBrush="{StaticResource AmberAccentGlowBrush}"
+                Opacity="{Binding TrafficLightStatus, Converter={x:Static local:ValueConverters.StatusActiveOpacity}, ConverterParameter=Amber}" />
+
+            <Border
+                Classes="bulb"
+                Background="{StaticResource GreenAccentBrush}"
+                BorderBrush="{StaticResource GreenAccentGlowBrush}"
+                Opacity="{Binding TrafficLightStatus, Converter={x:Static local:ValueConverters.StatusActiveOpacity}, ConverterParameter=Green}" />
+
+        </StackPanel>
+    </Border>
+</UserControl>

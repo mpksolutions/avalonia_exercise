@@ -1,0 +1,95 @@
+<UserControl
+    x:Class="AvaloniaExercise.Views.CrossingRequestButton"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AvaloniaExercise"
+    xmlns:vm="using:AvaloniaExercise.ViewModels"
+    x:DataType="vm:MainWindowViewModel">
+    <Panel HorizontalAlignment="Center" Width="108" Height="108">
+        <Border
+            Width="108"
+            Height="108"
+            Background="{StaticResource ButtonRingBackgroundBrush}"
+            BorderBrush="{StaticResource ButtonRingBorderBrush}"
+            BorderThickness="2"
+            CornerRadius="54" />
+        <Button
+            Width="92"
+            Height="92"
+            HorizontalAlignment="Center"
+            HorizontalContentAlignment="Center"
+            VerticalAlignment="Center"
+            VerticalContentAlignment="Center"
+            Command="{Binding RequestCrossingCommand}"
+            CornerRadius="46"
+            Padding="0">
+            <Button.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Background" Value="{StaticResource ButtonBackgroundBrush}" />
+                    <Setter Property="BorderBrush" Value="{StaticResource GreenAccentBrush}" />
+                    <Setter Property="BorderThickness" Value="2" />
+                </Style>
+                <Style Selector="Button:pointerover /template/ ContentPresenter">
+                    <Setter Property="Background" Value="{StaticResource ButtonHoverBackgroundBrush}" />
+                </Style>
+                <Style Selector="Button:pointerover">
+                    <Setter Property="BorderBrush" Value="{StaticResource GreenAccentBrush}" />
+                    <Setter Property="BorderThickness" Value="2" />
+                </Style>
+                <Style Selector="Button:pressed /template/ ContentPresenter">
+                    <Setter Property="Background" Value="{StaticResource ButtonPressedBackgroundBrush}" />
+                </Style>
+                <Style Selector="Button:pressed">
+                    <Setter Property="BorderBrush" Value="{StaticResource GreenAccentBrush}" />
+                    <Setter Property="BorderThickness" Value="2" />
+                </Style>
+                <Style Selector="Button:disabled /template/ ContentPresenter">
+                    <Setter Property="Background" Value="{StaticResource ButtonDisabledBackgroundBrush}" />
+                </Style>
+                <Style Selector="Button:disabled">
+                    <Setter Property="BorderBrush" Value="{StaticResource SubtleBorderBrush}" />
+                    <Setter Property="BorderThickness" Value="2" />
+                </Style>
+                <Style Selector="Button TextBlock">
+                    <Setter Property="Foreground" Value="{StaticResource GreenAccentBrush}" />
+                </Style>
+                <Style Selector="Button:disabled TextBlock">
+                    <Setter Property="Foreground" Value="{StaticResource TextSubduedBrush}" />
+                </Style>
+                <Style Selector="Button:disabled TextBlock.pulse">
+                    <Style.Animations>
+                        <Animation Duration="0:0:1.2" IterationCount="INFINITE" Easing="SineEaseInOut">
+                            <KeyFrame Cue="0%">
+                                <Setter Property="Opacity" Value="1" />
+                            </KeyFrame>
+                            <KeyFrame Cue="50%">
+                                <Setter Property="Opacity" Value="0.35" />
+                            </KeyFrame>
+                            <KeyFrame Cue="100%">
+                                <Setter Property="Opacity" Value="1" />
+                            </KeyFrame>
+                        </Animation>
+                    </Style.Animations>
+                </Style>
+            </Button.Styles>
+            <Panel>
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Classes.pulse="{Binding IsCrossingRequested}"
+                    FontSize="11"
+                    FontWeight="Bold"
+                    IsVisible="{Binding CrossingCountdown, Converter={x:Static StringConverters.IsNullOrEmpty}}"
+                    LetterSpacing="1.5"
+                    Text="REQUEST" />
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="28"
+                    FontWeight="SemiBold"
+                    IsVisible="{Binding CrossingCountdown, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
+                    Text="{Binding CrossingCountdown}" />
+            </Panel>
+        </Button>
+    </Panel>
+</UserControl>

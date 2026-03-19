@@ -1,0 +1,52 @@
+<UserControl
+    x:Class="AvaloniaExercise.Views.PedestrianChip"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:icons="https://github.com/projektanker/icons.avalonia"
+    xmlns:local="using:AvaloniaExercise"
+    xmlns:vm="using:AvaloniaExercise.ViewModels"
+    x:DataType="vm:PedestrianViewModel">
+    <Border
+        Background="{StaticResource ChipBackgroundBrush}"
+        BorderBrush="{StaticResource ChipBorderBrush}"
+        BorderThickness="1.5"
+        CornerRadius="24"
+        MinWidth="160"
+        Padding="4,4,14,4">
+        <StackPanel Orientation="Horizontal" Spacing="9" VerticalAlignment="Center">
+            <Panel Width="40" Height="40">
+                <Border
+                    Width="40"
+                    Height="40"
+                    CornerRadius="20"
+                    ClipToBounds="True">
+                    <Grid RowDefinitions="*,*">
+                        <Border Grid.Row="0" Background="{Binding ShirtColor, Converter={x:Static local:ValueConverters.ColorToBrush}}" />
+                        <Border Grid.Row="1" Background="{Binding ShortsColor, Converter={x:Static local:ValueConverters.ColorToBrush}}" />
+                    </Grid>
+                </Border>
+                <icons:Icon
+                    FontSize="24"
+                    Foreground="White"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Value="{Binding SpeciesIcon}">
+                    <icons:Icon.Effect>
+                        <DropShadowEffect BlurRadius="7" Color="Black" OffsetX="0" OffsetY="0" Opacity="1" />
+                    </icons:Icon.Effect>
+                </icons:Icon>
+            </Panel>
+            <StackPanel Spacing="3" VerticalAlignment="Center">
+                <TextBlock
+                    Text="{Binding Name}"
+                    FontSize="12"
+                    FontWeight="Medium"
+                    Foreground="{StaticResource TextSecondaryBrush}" />
+                <TextBlock
+                    Text="{Binding WaitingLabel}"
+                    FontSize="10"
+                    Foreground="{StaticResource TextSubduedBrush}" />
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

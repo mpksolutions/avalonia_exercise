@@ -1,0 +1,74 @@
+<UserControl
+    x:Class="AvaloniaExercise.Views.PedestrianStatsBar"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:AvaloniaExercise.ViewModels"
+    x:DataType="vm:MainWindowViewModel">
+    <Border
+        Background="{StaticResource TopBarBackgroundBrush}"
+        BorderBrush="{StaticResource SidebarBorderBrush}"
+        BorderThickness="0,0,0,1"
+        Padding="20,0">
+        <Grid VerticalAlignment="Center">
+            <TextBlock
+                FontSize="15"
+                FontWeight="SemiBold"
+                Foreground="{StaticResource TextPrimaryBrush}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Text="Pedestrians" />
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center" Margin="0,0,12,0">
+                    <TextBlock
+                        FontSize="12"
+                        Foreground="{StaticResource TextSubduedBrush}"
+                        VerticalAlignment="Center"
+                        Text="Waiting" />
+                    <TextBlock
+                        Width="28"
+                        FontSize="12"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource AmberAccentBrush}"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="{Binding WaitingCount}" />
+                </StackPanel>
+                <Border Width="1" Height="18" Background="{StaticResource SubtleBorderBrush}" VerticalAlignment="Center" />
+                <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center" Margin="18,0,12,0">
+                    <TextBlock
+                        FontSize="12"
+                        Foreground="{StaticResource TextSubduedBrush}"
+                        VerticalAlignment="Center"
+                        Text="Crossing" />
+                    <TextBlock
+                        Width="28"
+                        FontSize="12"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource GreenAccentBrush}"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="{Binding CrossingCount}" />
+                </StackPanel>
+                <Border Width="1" Height="18" Background="{StaticResource SubtleBorderBrush}" VerticalAlignment="Center" />
+                <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center" Margin="18,0,0,0">
+                    <TextBlock
+                        FontSize="12"
+                        Foreground="{StaticResource TextSubduedBrush}"
+                        VerticalAlignment="Center"
+                        Text="Crossed" />
+                    <TextBlock
+                        Width="28"
+                        FontSize="12"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource TextMutedBrush}"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="{Binding TotalCrossed}" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

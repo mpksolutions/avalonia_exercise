@@ -1,0 +1,65 @@
+<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Backgrounds -->
+    <Color x:Key="WindowBackground">#12151F</Color>
+    <Color x:Key="SidebarBackground">#0B0D14</Color>
+    <Color x:Key="TopBarBackground">#0D1018</Color>
+    <Color x:Key="TrafficLightBackground">#14172A</Color>
+    <Color x:Key="ButtonRingBackground">#0A0C14</Color>
+    <Color x:Key="ButtonBackground">#0F2118</Color>
+    <Color x:Key="ButtonHoverBackground">#1A3526</Color>
+    <Color x:Key="ButtonPressedBackground">#071510</Color>
+    <Color x:Key="ButtonDisabledBackground">#0D0F17</Color>
+
+    <!-- Borders -->
+    <Color x:Key="SidebarBorder">#1A1D2E</Color>
+    <Color x:Key="TrafficLightBorder">#1E2236</Color>
+    <Color x:Key="ButtonRingBorder">#252840</Color>
+    <Color x:Key="SubtleBorder">#2A2D3E</Color>
+    <Color x:Key="ChipBackground">#1A1D2E</Color>
+    <Color x:Key="ChipBorder">#2A2E45</Color>
+
+    <!-- Text -->
+    <Color x:Key="TextPrimary">#E2E5F1</Color>
+    <Color x:Key="TextSecondary">#D8DCF0</Color>
+    <Color x:Key="TextMuted">#8B92AF</Color>
+    <Color x:Key="TextSubdued">#4A5170</Color>
+
+    <!-- Accents -->
+    <Color x:Key="GreenAccent">#22D46A</Color>
+    <Color x:Key="AmberAccent">#FFB422</Color>
+    <Color x:Key="RedAccent">#FF4B4B</Color>
+    <Color x:Key="GreenAccentGlow">#6022D46A</Color>
+    <Color x:Key="AmberAccentGlow">#60FFB422</Color>
+    <Color x:Key="RedAccentGlow">#60FF4B4B</Color>
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource WindowBackground}" />
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{StaticResource SidebarBackground}" />
+    <SolidColorBrush x:Key="TopBarBackgroundBrush" Color="{StaticResource TopBarBackground}" />
+    <SolidColorBrush x:Key="TrafficLightBackgroundBrush" Color="{StaticResource TrafficLightBackground}" />
+    <SolidColorBrush x:Key="ButtonRingBackgroundBrush" Color="{StaticResource ButtonRingBackground}" />
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{StaticResource ButtonBackground}" />
+    <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{StaticResource ButtonHoverBackground}" />
+    <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" Color="{StaticResource ButtonPressedBackground}" />
+    <SolidColorBrush x:Key="ButtonDisabledBackgroundBrush" Color="{StaticResource ButtonDisabledBackground}" />
+    <SolidColorBrush x:Key="SidebarBorderBrush" Color="{StaticResource SidebarBorder}" />
+    <SolidColorBrush x:Key="TrafficLightBorderBrush" Color="{StaticResource TrafficLightBorder}" />
+    <SolidColorBrush x:Key="ButtonRingBorderBrush" Color="{StaticResource ButtonRingBorder}" />
+    <SolidColorBrush x:Key="SubtleBorderBrush" Color="{StaticResource SubtleBorder}" />
+    <SolidColorBrush x:Key="ChipBackgroundBrush" Color="{StaticResource ChipBackground}" />
+    <SolidColorBrush x:Key="ChipBorderBrush" Color="{StaticResource ChipBorder}" />
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextPrimary}" />
+    <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextSecondary}" />
+    <SolidColorBrush x:Key="TextMutedBrush" Color="{StaticResource TextMuted}" />
+    <SolidColorBrush x:Key="TextSubduedBrush" Color="{StaticResource TextSubdued}" />
+    <SolidColorBrush x:Key="GreenAccentBrush" Color="{StaticResource GreenAccent}" />
+    <SolidColorBrush x:Key="AmberAccentBrush" Color="{StaticResource AmberAccent}" />
+    <SolidColorBrush x:Key="RedAccentBrush" Color="{StaticResource RedAccent}" />
+    <SolidColorBrush x:Key="GreenAccentGlowBrush" Color="{StaticResource GreenAccentGlow}" />
+    <SolidColorBrush x:Key="AmberAccentGlowBrush" Color="{StaticResource AmberAccentGlow}" />
+    <SolidColorBrush x:Key="RedAccentGlowBrush" Color="{StaticResource RedAccentGlow}" />
+
+</ResourceDictionary>
